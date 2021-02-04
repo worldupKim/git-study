@@ -1,0 +1,153 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" lang="ko" content="">
+  <meta name="keyword" lang="ko" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  <title>WEB1 - Welcome</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>    
+  <!--<script defer src="variable.js"></script> 
+  <script defer src="operator.js"></script> 
+  <script defer src="function.js"></script>-->
+  <script defer src="font_resize.js"></script>
+  <script defer src="common.js"></script>
+</head>
+<body>  
+  <input type="button" value="Hi" onclick="alert('Hi')">
+  <input type="text" onchange="alert('changed')">
+  <input type="text" onkeydown="alert('key down!')">
+  <div>
+    <!-- <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white'">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black'"> -->
+
+    <!-- <input id="night_day" type="button" value="night" onclick="
+      if(document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#night_day').value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value = 'night';
+      }
+    "> -->
+
+    <input type="button" value="night" onclick="
+      var target = document.querySelector('body');
+      if(this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+
+        var aList = document.querySelectorAll('a');
+        var i = 0;
+        while(i < aList.length){
+            console.log(aList[i]);
+            aList[i].style.color = 'powderblue';
+            i = i + 1;
+            
+        }
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+        var aList = document.querySelectorAll('a');
+        var i = 0;
+        while(i < aList.length){
+            console.log(aList[i]);
+            aList[i].style.color = 'red';
+            i = i + 1;
+            
+        }
+      }
+    ">
+
+  </div>
+  <h1>Comparison operators & Boolean</h1>
+  <h2>===</h2>
+  <h3>1===1</h3>
+  <script>
+    document.write(1===1);
+  </script>
+
+  <h3>1===2</h3>
+  <script>
+    document.write(1===2);
+  </script>
+
+  <h3>1&lt;2</h3>
+  <script>
+    document.write(1<2);
+  </script>
+
+  <h3>1&lt;1</h3>
+  <script>
+    document.write(1<1);
+  </script>
+
+  <h1>Conditional statements</h1>
+  <h2>Program</h2>
+ 
+  <h2>If-true</h2>
+  <script>
+    document.write("1<br>");
+    if(true){
+      document.write("2<br>");
+    } else {
+      document.write("3<br>");
+    }      
+    document.write("4<br>");
+  </script>
+
+  <h2>If-false</h2>
+  <script>
+    document.write("1<br>");
+    if(false){
+      document.write("2<br>");
+    } else {
+      document.write("3<br>");
+    }      
+    document.write("4<br>");
+  </script>
+  
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h1>Loop</h1>
+  <ul>
+  <script>
+    document.write('<li>1</li>');
+    var i = 0;
+    while(i < 3){
+      document.write('<li>2</li>');
+      document.write('<li>3</li>');
+      i = i + 1;
+    }    
+    document.write('<li>4</li>');
+  </script>
+  </ul>
+  <h1>Loop &amp; Array</h1>
+  <script>
+    var friends = ['hyunwoo','minhyuk','kihyun','hyungwon'];
+  </script>
+  <h2>Friends</h2>
+  <script>
+    var i = 0;
+    while(i < friends.length){
+      document.write('<li><a href="#">' + friends[i] + '</a></li>');
+      i = i + 1;
+    }
+  </script> 
+
+     
+</body>
+</html>
+
